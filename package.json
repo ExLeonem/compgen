@@ -1,0 +1,30 @@
+{
+  "name": "necto",
+  "version": "1.0.0",
+  "description": "Generate component library stubs out of figma files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExLeonem/necto.git"
+  },
+  "keywords": [
+    "parser",
+    "figma",
+    "generator"
+  ],
+  "author": "Maksim Sandybekov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ExLeonem/necto/issues"
+  },
+  "homepage": "https://github.com/ExLeonem/necto#readme",
+  "dependencies": {
+    "configstore": "^5.0.1",
+    "envinfo": "^7.7.3",
+    "prompts": "^2.3.2",
+    "signale": "^1.4.0"
+  }
+}
