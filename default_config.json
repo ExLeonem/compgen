@@ -1,0 +1,13 @@
+{
+    "style": {
+        "ext": "[scss | css | less]",
+        "dir": "./assets/style"
+    },
+    "components": {
+        "dir": "./"
+    },
+    "icons": {
+        "dir": "./assets/icons",
+        "ext": "svg"
+    }
+}

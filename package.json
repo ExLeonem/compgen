@@ -1,9 +1,10 @@
 {
-  "name": "necto",
+  "name": "morph",
   "version": "1.0.0",
   "description": "Generate component library stubs out of figma files.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,9 +23,13 @@
   },
   "homepage": "https://github.com/ExLeonem/necto#readme",
   "dependencies": {
+    "commander": "^6.1.0",
     "configstore": "^5.0.1",
     "envinfo": "^7.7.3",
     "prompts": "^2.3.2",
     "signale": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
   }
 }
