@@ -1,5 +1,5 @@
 
-# fmorp
+# Stran
 
 A transformer which takes figma files and generates react components.
 
@@ -14,7 +14,12 @@ A transformer which takes figma files and generates react components.
 4. [Contribution](#Contribution)
 
 
+## Dependencies
 
+1. [Commander](https://github.com/tj/commander.js#readme)
+2. [envinfo](https://github.com/tabrindle/envinfo#readme)
+3. [configstore](https://github.com/yeoman/configstore#readme)
+4. [Signale](https://github.com/klaussinani/signale#readme)
 
 
 ## Roadmap

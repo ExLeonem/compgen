@@ -8,7 +8,7 @@ program.parse(process.argv);
 
 program
     .command("init")
-    .description("Initialize the current ")
+    .description("Initialize the current directory, generates default configuration file.")
     .action(() => {
         // Initialize current directory for use with morphology, create .morph.config.json
         
