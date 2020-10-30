@@ -2,9 +2,12 @@
   "name": "morph",
   "version": "1.0.0",
   "description": "Generate component library stubs out of figma files.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm run build && node ./dist/index.js",
+    "build": "tsc",
+    "prepublish": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,10 +17,12 @@
   "keywords": [
     "parser",
     "figma",
-    "generator"
+    "style",
+    "generator",
+    "components"
   ],
   "author": "Maksim Sandybekov",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ExLeonem/necto/issues"
   },
@@ -30,6 +35,8 @@
     "signale": "^1.4.0"
   },
   "devDependencies": {
-    "jest": "^26.4.2"
+    "@types/node": "^14.6.2",
+    "jest": "^26.4.2",
+    "typescript": "^4.0.5"
   }
 }
