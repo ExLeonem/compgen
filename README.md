@@ -1,5 +1,5 @@
 
-# Stran
+# CompGen
 
 A transformer which takes figma files and generates react components.
 
