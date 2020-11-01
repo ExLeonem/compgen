@@ -1,4 +1,6 @@
 {
+    "parser": "react",
+    "template": "https://github.com/ExLeonem/react-lib-starter",
     "style": {
         "ext": "[scss | css | less]",
         "dir": "./assets/style"

@@ -1,7 +1,7 @@
 {
-  "name": "morph",
+  "name": "blend",
   "version": "1.0.0",
-  "description": "Generate component library stubs out of figma files.",
+  "description": "Component library generation.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/ExLeonem/necto#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "commander": "^6.1.0",
     "configstore": "^5.0.1",
     "envinfo": "^7.7.3",
