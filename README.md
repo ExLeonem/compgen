@@ -1,5 +1,5 @@
 
-# Stran
+# CompGen
 
 A transformer which takes figma files and generates whatever.
 
@@ -39,6 +39,15 @@ A transformer which takes figma files and generates whatever.
 ## Setup
 
 
+
+## Commands
+
+| Command | Description
+| ---   | ---
+| init | Initialize a new component library
+| parse | Parse single file 
+| sync | Synchronize the component library with current stylesheets
+| link | Link generated component library to wireframes
 
 
 
