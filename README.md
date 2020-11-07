@@ -1,7 +1,7 @@
 
 # Stran
 
-A transformer which takes figma files and generates react components.
+A transformer which takes figma files and generates whatever.
 
 
 
@@ -23,6 +23,11 @@ A transformer which takes figma files and generates react components.
 
 
 ## Roadmap
+
+- [ ] Configuration file format
+- [ ] React Component Library 
+- [ ] React-Native Application
+- [ ]
 
 
 ## Installation

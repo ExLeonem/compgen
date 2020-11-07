@@ -1,4 +1,6 @@
 {
+    "parser": "react-lib",
+    "template": "",
     "style": {
         "ext": "[scss | css | less]",
         "dir": "./assets/style"

@@ -1,5 +1,5 @@
-#!/usr/bin/env node
 const { Command } = require('commander');
+const signale = require('signale');
 
 const program = new Command();
 program.version("1.0.0");
@@ -7,11 +7,14 @@ program.parse(process.argv);
 
 
 program
-    .command("init")
+    .command("init <name>")
     .description("Initialize the current directory, generates default configuration file.")
-    .action(() => {
+    .option("-t, --template", "Use a template to initialize the project")
+    .option("", "")
+    .action((name:string, cmdObj:object) => {
         // Initialize current directory for use with morphology, create .morph.config.json
-        
+        signale.debug("Create a new ");
+
     });
 
 
@@ -24,11 +27,11 @@ program
 
 
 program
-    .command("pull")
+    .command("sync")
     .description("Pull styles from a figma file.")
     .option("-v, --verbose", "Show parse output.")
     .option("-p, --parser", "The parser to use [default: react | react-native]")
-    .action((cmdObj) => {
+    .action((cmdObj: object) => {
         console.log("parse a file.")
     });
 

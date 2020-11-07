@@ -17,7 +17,7 @@
     "generator"
   ],
   "author": "Maksim Sandybekov",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ExLeonem/necto/issues"
   },
