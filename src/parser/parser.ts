@@ -1,6 +1,8 @@
 
 
-interface IParser {
-
-    
+interface FigmaTree {
+    tree: object
 }
+
+
+export default FigmaTree;

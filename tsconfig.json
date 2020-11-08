@@ -69,6 +69,9 @@
   },
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "test",
+    "jest.config.ts",
+    "jsdoc.config.js"
   ]
 }

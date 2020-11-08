@@ -1,7 +1,7 @@
 
 # CompGen
 
-A transformer which takes figma files and generates whatever.
+A transformer which takes figma files and generates whatever you like.
 
 
 
@@ -27,7 +27,11 @@ A transformer which takes figma files and generates whatever.
 - [ ] Configuration file format
 - [ ] React Component Library 
 - [ ] React-Native Application
-- [ ]
+- [ ] Templates
+    - [ ] Component Library (React/Vue/Angular)
+    - [ ] Application (Link to component library)
+    - [ ] Native Application (electron)
+    - [ ] Mobile Application (React Native/Flutter) 
 
 
 ## Installation
@@ -50,6 +54,8 @@ A transformer which takes figma files and generates whatever.
 | link | Link generated component library to wireframes
 
 
+
+## Creating a template
 
 
 
