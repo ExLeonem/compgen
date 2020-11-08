@@ -1,7 +1,9 @@
 const fs = require('fs');
 
 
-
+/**
+ * Manages access to projects
+ */
 class ProjectManager {
 
 

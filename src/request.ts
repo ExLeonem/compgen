@@ -4,6 +4,7 @@ const axios = require('axios');
 
 /**
  * Requests style sheet content.
+ * 
  */
 class Request {
 
@@ -11,7 +12,9 @@ class Request {
     apiToken: string;
 
     constructor(apiToken: string, fileKey: number) {
-        // https://www.figma.com/file/:key/:title?node-id=:id.
+        // https://www.figma.com/file/:key/:title // Specific File
+        // https://www.figma.com/file/:key/:title?node-id=:id. // File Nodes (Pages)
+        // All files in project
         // https://www.figma.com/file/NwglkGOKUBBIACD8GgZUXbbe/conziv?node-id=1452%3A22291
         // this.baseUrl = "https://api.figma.com";
         this.baseUrl = `https://api.figma.com/files/${fileKey}/nodes`;

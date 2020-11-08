@@ -10,7 +10,6 @@ A transformer which takes figma files and generates whatever you like.
 1. [Roadmap](#Roadmap)
 2. [Installation](#Installation)
 3. [Setup](#Setup)
-
 4. [Contribution](#Contribution)
 
 
@@ -37,11 +36,15 @@ A transformer which takes figma files and generates whatever you like.
 ## Installation
 
 ```javascript
-    $ npm i -g fior
+    $ npm i -g figma-style-parser
 ```
 
 ## Setup
 
+### How to create a new Project?
+
+1. Generate and save a figma [access Token](https://www.figma.com/developers/api#authentication). You can delete them anytime to revoke access.
+2. Create a project with `figma-style-parser init myProjectName`
 
 
 ## Commands

@@ -1,5 +1,5 @@
 {
-  "name": "blend",
+  "name": "figma-style-parser",
   "version": "1.0.0",
   "description": "Component library generation.",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
     "start": "npm run build && node ./dist/index.js",
     "build": "tsc",
     "prepublish": "tsc",
-    "docs:gen": "jsdoc -c ./jsdoc.config.json -d docs",
+    "docs:gen": "jsdoc src -r -c ./jsdoc.config.json -d docs",
     "test": "jest",
     "test:clean": "jest --clearCache",
     "test:init": "jest --init"

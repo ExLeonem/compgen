@@ -4,9 +4,7 @@
     ],
     "recurseDepth": 10,
     "source": {
-        "include": ["src"],
-        "includePattern": ".+\\.(js|ts|jsx|tsx)$",
-        "excludePattern": "(^|\\/|\\\\)_"
+        "includePattern": ".+\\.(js|ts|jsx|tsx)$"
     },
     "sourceType": "module",
     "tags": {
