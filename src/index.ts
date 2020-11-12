@@ -1,6 +1,7 @@
 const { Command } = require('commander');
-import ProjectMenu from './project/menu';
-import Request from './request';
+
+import Project from './project/project';
+import Request from './project/api_request';
 
 const program = new Command();
 
@@ -13,13 +14,12 @@ program
 program
     .command("init <name>")
     .description("Initialize the current directory, generates default configuration file.")
-    .option("-t, --template", "Use a template to initialize the project.")
+    .option("-t, --template <templateUrl>", "Use a template to initialize the project.")
     .option("-p, --parser <parser>", "The parser to be used.")
     .option("-u, --url <url>", "URL to the project to be used.")
-    .action((name:string, cmdObj:object) => {
+    .action((name: string, options: object) => {
         // Initialize current directory for use with morphology, create .morph.config.json
-
-        ProjectMenu.init(name, cmdObj)
+        Project.create(name, options);
     });
 
 
@@ -31,6 +31,7 @@ program
     .action((options: object) => {
         
     });
+
 
 
 program

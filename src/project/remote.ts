@@ -1,28 +1,40 @@
+const url = require('url');
 const signale = require('signale');
 const axios = require('axios');
 
 
 /**
- * Requests style sheet content.
- * 
+ * Represents the remote figma project.
  */
-class Request {
+class Remote {
 
     baseUrl: string;
     apiToken: string;
+    content?: object;
 
-    constructor(apiToken: string, fileKey: number) {
+    /**
+     * Initialize a connection to the remote figma project.
+     * 
+     * @param apiToken The API-Token used to request figma api content.
+     * @param projectKey The project key, where to look for files.
+     */
+    constructor(apiToken:string, fileKey: string) {
         // https://www.figma.com/file/:key/:title // Specific File
         // https://www.figma.com/file/:key/:title?node-id=:id. // File Nodes (Pages)
-        // All files in project
-        // https://www.figma.com/file/NwglkGOKUBBIACD8GgZUXbbe/conziv?node-id=1452%3A22291
-        // this.baseUrl = "https://api.figma.com";
+
         this.baseUrl = `https://api.figma.com/files/${fileKey}/nodes`;
         this.apiToken = apiToken;
     }
 
-    request(url: string) {
-        
+
+
+    /**
+     * Request the current content of the figma file.
+     */
+    private request() {
+
+        // TODO: Async do a blocking call
+        // Request remote data
         axios.get(url, {
             headers: {
                 "X-Figma-Token": this.apiToken
@@ -36,5 +48,3 @@ class Request {
         });
     }
 }
-
-export default Request;

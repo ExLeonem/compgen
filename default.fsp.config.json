@@ -1,0 +1,40 @@
+{
+    "files": [
+        "NwglkGOKUBBIACD8GgZUXbbe/conziv/node-id"
+    ],
+    "components": {
+        "dir": "/src",
+        "exclude": ["names or patterns to exclude"],
+        "include": ["names or patterns to include"],
+        "core": {
+            "pattern": "",
+            "names": [],
+            "dir": "/core"
+        }
+    },
+    "style": {
+        
+    },
+    "map": {
+        "components": {
+            "main": "./src",
+            "page": "folder",
+            "exclude": []
+        },
+        "style": {
+            "ext": "[scss | css | less]",
+            "dir": "./assets/style"
+        },
+        "icons": {
+            "dir": "./assets/icons",
+            "ext": "svg"
+        }
+    },
+    "parser": {
+        "components": {
+            "functional": {
+                "pattern": ""
+            }
+        }
+    }
+}

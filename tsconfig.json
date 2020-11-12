@@ -72,6 +72,8 @@
     "dist",
     "test",
     "jest.config.ts",
-    "jsdoc.config.js"
+    "jsdoc.config.js",
+    "coverage",
+    "docs"
   ]
 }

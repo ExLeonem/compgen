@@ -1,7 +1,7 @@
 
-# CompGen
+# FSP - Figma style parser
 
-A transformer which takes figma files and generates whatever you like.
+A parser which takes figma files and generates whatever you like.
 
 
 
@@ -19,6 +19,12 @@ A transformer which takes figma files and generates whatever you like.
 2. [envinfo](https://github.com/tabrindle/envinfo#readme)
 3. [configstore](https://github.com/yeoman/configstore#readme)
 4. [Signale](https://github.com/klaussinani/signale#readme)
+
+
+## TODO
+
+- [ ] Cipher/Decipher api token to be used. Save token on machine (crypto nodejs library)
+- [ ]  
 
 
 ## Roadmap
@@ -52,10 +58,10 @@ A transformer which takes figma files and generates whatever you like.
 | Command | Description
 | ---   | ---
 | init | Initialize a new component library
-| parse | Parse single file 
+| add | Parse single file 
 | sync | Synchronize the component library with current stylesheets
+| config | Set global configurations to be used.
 | link | Link generated component library to wireframes
-
 
 
 ## Creating a template
