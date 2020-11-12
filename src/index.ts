@@ -1,7 +1,9 @@
-const { Command } = require('commander');
+#!/usr/bin/env node
 
-import Project from './project/project';
-import Request from './project/api_request';
+
+const { Command } = require('commander');
+import Project, { IOptions as ProjectOptions} from './project/project';
+
 
 const program = new Command();
 
@@ -17,7 +19,7 @@ program
     .option("-t, --template <templateUrl>", "Use a template to initialize the project.")
     .option("-p, --parser <parser>", "The parser to be used.")
     .option("-u, --url <url>", "URL to the project to be used.")
-    .action((name: string, options: object) => {
+    .action((name: string, options: ProjectOptions) => {
         // Initialize current directory for use with morphology, create .morph.config.json
         Project.create(name, options);
     });

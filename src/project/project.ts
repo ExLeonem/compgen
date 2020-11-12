@@ -43,11 +43,9 @@ class Project {
 
         this.path = process.cwd();
         
-        
         this.name = name;
         this.options = {};
-
-        this.isProject = this.inCurrentDirectory(this.path, ".fsp.config.json");
+        this.isProject = this.dirIsProject(this.path,);
     }
 
 
@@ -59,6 +57,8 @@ class Project {
      */
     static create(name: string, options: IOptions) {
         
+
+
     }
 
 
@@ -87,8 +87,6 @@ class Project {
      * Create default configuration for a project
      */
     private createDefaultConfig() {
-        
-        
 
         return {
             
@@ -96,11 +94,25 @@ class Project {
     }
 
 
-    private inCurrentDirectory(path: string, lookFor: string) {
-        let filesInDir = fs.readdir(this.path);
-        return lookFor in filesInDir;
+    /**
+     * Check if the current directory is a fsp project.
+     * The directory is a project if a fsp config file exists. (".fsp.config.json")
+     * 
+     * @param path The path to check. (optional) 
+     * @return {boolean} Wether or not directory at path is a fsp project.
+     */
+    private dirIsProject(path?: string) {
+
+        let currentDir = path !== null ? path : process.cwd();
+        let configFileName = ".fsp.config.json";
+
+        let filesInDir = fs.readdir(currentDir);
+        return configFileName in filesInDir;
     }
 }
 
 
 export default Project;
+export {
+    IOptions
+}

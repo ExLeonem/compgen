@@ -38,9 +38,7 @@ class ApiRequest {
     getFile() {
         let base_url = "https://www.figma.com/file/:key/:title?node-id=:id";
         if (this.fileKey && this.fileTitle && this.nodeId) {
-
-
-            
+                
         }
     }
 

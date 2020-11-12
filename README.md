@@ -27,9 +27,10 @@ A parser which takes figma files and generates whatever you like.
 - [ ]  
 
 
-## Roadmap
+## Roadmap/Ideas
 
 - [ ] Configuration file format
+- [ ] Composeable project configuration for example (rollout <-> webpack, typescript <-> javascript, jest <-> jasmine and so on)
 - [ ] React Component Library 
 - [ ] React-Native Application
 - [ ] Templates
@@ -69,3 +70,8 @@ A parser which takes figma files and generates whatever you like.
 
 
 ## Contribution
+
+
+### Local development
+
+1. Execute `npm install` inside the root directory of the project. 

@@ -3,38 +3,26 @@
         "NwglkGOKUBBIACD8GgZUXbbe/conziv/node-id"
     ],
     "components": {
+        "description": "User defined mappings for components",
         "dir": "/src",
         "exclude": ["names or patterns to exclude"],
         "include": ["names or patterns to include"],
         "core": {
             "pattern": "",
             "names": [],
-            "dir": "/core"
+            "dir": "/core",
+            "toFn": "pattern or patterns to be used"
         }
     },
     "style": {
-        
+        "description": "User defined mappings for stylesheets",
+        "dir": "/assets/style"
     },
-    "map": {
-        "components": {
-            "main": "./src",
-            "page": "folder",
-            "exclude": []
-        },
-        "style": {
-            "ext": "[scss | css | less]",
-            "dir": "./assets/style"
-        },
-        "icons": {
-            "dir": "./assets/icons",
-            "ext": "svg"
-        }
+    "assets": {
+        "description": "Use defined mappings for assets"
     },
     "parser": {
-        "components": {
-            "functional": {
-                "pattern": ""
-            }
-        }
+        "components": "react",
+        "stylesheets": "scss"
     }
 }
