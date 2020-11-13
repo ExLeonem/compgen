@@ -18,8 +18,7 @@
     "test:init": "jest --init"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ExLeonem/figma-style-parser.git"
+    "type": "git"
   },
   "keywords": [
     "parser",

@@ -13,9 +13,11 @@
     },
     "templates": {
         "cleverLinks": false,
-        "monospaceLinks": false
+        "monospaceLinks": false,
+        "sort": false
     },
     "opts": {
-        "template": "node_modules/better-docs"
+        "template": "node_modules/better-docs",
+        "sort": false
     }
 }

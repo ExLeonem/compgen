@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+// #!/usr/bin/env node
 
 const { Command } = require('commander');
 import Project, { IOptions as ProjectOptions} from './project/project';
