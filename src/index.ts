@@ -1,4 +1,4 @@
-// #!/usr/bin/env node
+#!/usr/bin/env node
 
 const { Command } = require('commander');
 import Project, { IOptions as ProjectOptions} from './project/project';
@@ -20,7 +20,8 @@ program
     .option("-u, --url <url>", "URL to the project to be used.")
     .action((name: string, options: ProjectOptions) => {
         // Initialize current directory for use with morphology, create .morph.config.json
-        Project.create(name, options);
+        let project = new Project(name, options);
+        project.create();
     });
 
 
@@ -30,6 +31,7 @@ program
     .option("-s, --style", "Consists only the file of just style assets?")
     .option("-f, --file <fileUrl>", "Add a new file to the configuration")
     .action((options: object) => {
+        
         
     });
 

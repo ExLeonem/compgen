@@ -11,7 +11,7 @@
     "start": "npm run build && node ./dist/index.js",
     "build": "tsc",
     "prepublish": "tsc",
-    "local:install": "npm i -g && fsp",
+    "rebuild": "npm run build && npm uninstall -g && npm i -g",
     "docs:gen": "jsdoc src -r -c ./jsdoc.config.json -d docs",
     "test": "jest --coverage",
     "test:clean": "jest --clearCache",
@@ -35,8 +35,9 @@
   "homepage": "https://github.com/ExLeonem/figma-style-parser#readme",
   "dependencies": {
     "axios": "^0.21.0",
+    "chalk": "^4.1.0",
     "commander": "^6.1.0",
-    "configstore": "^5.0.1",
+    "conf": "^7.1.2",
     "envinfo": "^7.7.3",
     "prompts": "^2.3.2",
     "signale": "^1.4.0"
