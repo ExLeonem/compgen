@@ -2,6 +2,7 @@
 
 const { Command } = require('commander');
 import Project, { IOptions as ProjectOptions} from './project/project';
+import Config  from './project/config';
 
 
 const program = new Command();
@@ -12,11 +13,20 @@ program
     .option("sync", "Synchronize changes with current styles in figma.")
     .version("1.0.0");
 
+
 program
-    .command("init <name>")
-    .description("Initialize the current directory, generates default configuration file.")
-    .option("-t, --template <templateUrl>", "Use a template to initialize the project.")
-    .option("-p, --parser <parser>", "The parser to be used.")
+    .command("init")
+    .description("Creates a configuration file for project initialization.")
+    .action(() => {
+       let projectConfig = new Config();
+       projectConfig.init();
+    });
+
+program
+    .command("new <projectName>")
+    .description("Create a new project, generates a default configuration file.")
+    .option("-c, --config <configFile>", "Use a config file to initialize the project.")
+    .option("-p, --parser <parser>", "The parser to be used. Defaults to 'react'")
     .option("-u, --url <url>", "URL to the project to be used.")
     .action((name: string, options: ProjectOptions) => {
         // Initialize current directory for use with morphology, create .morph.config.json
@@ -32,9 +42,7 @@ program
     .option("-f, --file <fileUrl>", "Add a new file to the configuration")
     .action((options: object) => {
         
-        
     });
-
 
 
 program

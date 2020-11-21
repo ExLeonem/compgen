@@ -17,7 +17,7 @@ class Pipeline {
         // Set interoperabilities
         for (let i = 0; i < this.packages.length; i++) {
             let currentPackage: Package = this.packages[i];
-            currentPackage.interopt(newPackage);
+            // currentPackage.interopt(newPackage);
         }
 
         // Add package to pipeline
@@ -80,4 +80,13 @@ class PJest extends Package {
     getConfig() {
         return this.config;
     }
+}
+
+
+export default Package;
+export {
+    Pipeline,
+    PJest,
+    Interopt,
+    IConfig
 }

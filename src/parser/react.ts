@@ -1,18 +1,19 @@
 
-import FigmaTree from './parser';
+import {IParser, SourceTypes } from './parser';
 
 
 /**
  * React specific parser.
  */
-class ReactParser {
+class ReactParser implements IParser {
 
+    type: SourceTypes;
     fileStructure: object;
 
 
     constructor() {
         this.fileStructure = {};
-
+        this.type = SourceTypes.React;
     }
 
 
@@ -21,7 +22,10 @@ class ReactParser {
      * 
      * @param data 
      */
-    parse(data: FigmaTree) {
+    parse(data: string) {
 
     }
 }
+
+
+export default ReactParser;

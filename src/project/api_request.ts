@@ -6,7 +6,7 @@ const axios = require('axios');
  * Requests style sheet content.
  * 
  */
-class ApiRequest {
+class ApiCommunication {
 
     // Check documentation https://www.figma.com/developers/api#files-endpoints
     apiToken: string;

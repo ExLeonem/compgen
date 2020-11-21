@@ -1,15 +1,23 @@
-const signale = require('signale');
+// nodejs std
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-import chalk = require('chalk');
 const crypto = require('crypto');
 
+// packages
+const signale = require('signale');
+import chalk = require('chalk');
 
-/**
- * @interface
- * 
+// Code dependency
+
+
+
+/** 
  * Options that can be passed 
+ * 
+ * @interface
+ * @author Maksim Sandybekov
+ * @version 1.0.0
  */
 interface IOptions {
     template?: string,
@@ -24,11 +32,14 @@ interface IOptions {
  * Create and manage projects.
  * 
  * @class
+ * @author Maksim Sandybekov
+ * @version 1.0.0
  */
 class Project {
 
-    name: string;
     path: string;
+
+    name: string;
     options?: IOptions;
     config?: object; 
 
@@ -43,16 +54,17 @@ class Project {
      * @param name The name of the project
      * @param options Options useable 
      */
-    constructor(name: string, options?: IOptions) {
-
+    constructor(name?: string, options?: IOptions) {
 
         this.path = path.join(process.cwd(), name);
-        this.name = name;
-
+        this.name = name? name : "";
         this.options = options;
-        this.config = {};
 
+        // Is current directory already a project?
         this.isProject = this.dirIsProject(this.path);
+        if (this.isProject) {
+            this.config = {};
+        }
     }
 
 
@@ -71,17 +83,19 @@ class Project {
         let directoryExists = dirContent.includes(this.name);
         if (directoryExists) {
             let isDir = fs.statSync(this.path).isDirectory();
-            signale.error(`Can't create a project called ${this.name}. There is already a ${isDir? "directory" : "file"} with the same name at the current location.`);
+            // signale.error(`Can't create a project called ${this.name}. There is already a ${isDir? "directory" : "file"} with the same name at the current location.`);
+            console.log(chalk.red("Error:") + `There's already a ${isDir? "directory" : "file"} called ${this.name}.`);
             return;
         }
 
-        let isComplientName = Project.checkNameConvention(this.name);
-        if (!isComplientName) {
-            signale.error(`The project name ${this.name} doesn't conform with the naming convention.`);
-            return;
-        }
+        // let isComplientName = Project.checkNameConvention(this.name);
+        // if (!isComplientName) {
+        //     signale.error(chalk.red("Error:") + `The project name ${this.name} doesn't conform with the naming convention.`);
+        //     return;
+        // }
 
         // Create Project directory
+        console.log(chalk.blue("Create: ") + "Project directory");
         fs.mkdir(this.path, {}, (err: Error) => {
             if (err) {
                 signale.error(err);
@@ -134,6 +148,15 @@ class Project {
     }
 
 
+    private loadProjectConfig(): object {
+
+
+
+
+        return {};
+    }
+
+
     /**
      * Check if the current directory is a fsp project.
      * The directory is a project if a fsp config file exists. (".fsp.config.json")
@@ -153,8 +176,6 @@ class Project {
             return false;
         };
     }
-
-
     
 
     /**
@@ -171,6 +192,9 @@ class Project {
         return isValidName;
     }
 }
+
+
+
 
 
 export default Project;
