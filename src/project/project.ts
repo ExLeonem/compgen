@@ -107,7 +107,7 @@ class Project {
         // Load template into directory
         let templateBaseUrl = "https://github.com/ExLeonem/fsp-template";
         if (this.options?.template) {
-            
+                
         } else {
             
         }

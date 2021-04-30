@@ -58,8 +58,16 @@ program
     .description("Set global configurations to use.")
     .option("-p, --parser <parser>", "The parser to be used.")
     .option("-t, --token <token>", "Set a global to token to request the file contents.")
-    .action((options: object) => {
+    .action((options: any) => {
         
+
+        let optionKeys = Object.keys(options);
+        console.log(options.token)
+        if (optionKeys.length == 0) {
+            console.log("No options passed");
+        }
+
+        console.log("Trying to configure something");
     });
 
 

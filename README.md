@@ -24,7 +24,7 @@ A parser which takes figma files and generates whatever you like.
 ## TODO
 
 - [ ] Cipher/Decipher api token to be used. Save token on machine (crypto nodejs library)
-- [ ]  
+- [ ] Think of a better name for this library
 
 
 ## Roadmap/Ideas

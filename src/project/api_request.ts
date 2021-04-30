@@ -94,4 +94,4 @@ class ApiCommunication {
     }
 }
 
-export default ApiRequest;
+export default ApiCommunication;
